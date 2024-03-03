@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+   <record id="inherited_res_config_settings_view_form" model="ir.ui.view">
+       <field name="name">res.config.settings.view.form.inherit.website</field>
+       <field name="model">res.config.settings</field>
+       <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+       <field name="arch" type="xml">
+           <xpath expr="//setting[@id='automatic_invoice_generation']" position="after">
+               <div class="col-12 col-lg-6 o_setting_box" id="wbl_min_order_amount">
+                   <div class="o_setting_right_pane">
+                       <span class="o_form_label">Minimum Order Amount</span>
+                       <div class="text-muted">
+                           Enter the limit of minimum order amount
+                       </div>
+                       <div class="content-group">
+                           <div class="mt16">
+                               <field name="min_order_amount" class="o_light_label" widget="float"/>
+                           </div>
+                           <div class="mt16">
+                               <label class="o_form_label p-0 col-4 o_light_label mb-3 mt-2" for="is_tax_exclude"/>
+                               <field name="is_tax_exclude"/>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-12 col-lg-6 o_setting_box" id="wbl_min_order_amount_message">
+                   <div class="o_setting_right_pane">
+                       <span class="o_form_label">Message</span>
+                       <div class="text-muted">
+                           Message to show if cart is less than minimum order amount
+                       </div>
+                       <div class="content-group">
+                           <div class="mt16">
+                               <field name="message" class="o_light_label" widget="text"/>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </xpath>
+       </field>
+   </record>
+</odoo>

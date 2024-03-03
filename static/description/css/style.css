@@ -1,0 +1,12 @@
+.explore_module_tab {
+  transition: all ease-in 0.4s;
+  -webkit-transition: all ease-in 0.4s;
+  -moz-transition: all ease-in 0.4s;
+  -ms-transition: all ease-in 0.4s;
+  -o-transition: all ease-in 0.4s;
+}
+.explore_module_tab:hover {
+  -webkit-box-shadow: -2px -1px 18px 0px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -2px -1px 18px 0px rgba(0, 0, 0, 0.57);
+  box-shadow: -2px -1px 18px 0px rgba(0, 0, 0, 0.33);
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="wbl_min_order_amount_error_message" inherit_id="website_sale.cart_lines">
+        <xpath expr="//div[@id='cart_products']" position="before">
+            <t t-if="is_minimum_amount == True">
+                <div class="alert alert-warning">
+                    <strong>Warning!</strong>
+                    <t t-esc="message"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
